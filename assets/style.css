@@ -96,6 +96,45 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 .footer-actions a{margin-left:0;color:var(--text-secondary);text-decoration:none;padding:8px 12px;border-radius:8px;transition:all 0.3s ease}
 .footer-actions a:hover{color:var(--gold);background:rgba(251,191,36,0.1);transform:translateY(-2px)}
 
+/* cheat sheets styles */
+.cheat-sheets-intro{background:linear-gradient(135deg,var(--card) 0%,var(--card-hover) 100%);padding:32px;border-radius:var(--radius-lg);margin:24px 0;border:1px solid rgba(251,191,36,0.2);backdrop-filter:blur(10px)}
+.cheat-sheets-intro h2{color:var(--gold);margin:0 0 16px 0;font-size:24px}
+.cheat-sheets-intro p{margin:0 0 16px 0;color:var(--text-secondary);font-size:18px}
+.cheat-sheets-intro .bullet{list-style:none;padding:0;margin:16px 0}
+.cheat-sheets-intro .bullet li{padding:8px 0;color:var(--text-secondary);position:relative;padding-left:24px}
+.cheat-sheets-intro .bullet li::before{content:'✨';position:absolute;left:0;color:var(--gold)}
+
+.cheat-sheets-grid{display:grid;grid-template-columns:1fr;gap:24px;margin:32px 0}
+.cheat-sheet-card{background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid rgba(251,191,36,0.1);transition:all 0.3s ease;backdrop-filter:blur(10px);overflow:hidden;position:relative}
+.cheat-sheet-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:0;transition:opacity 0.3s ease}
+.cheat-sheet-card:hover::before{opacity:1}
+.cheat-sheet-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(251,191,36,0.3)}
+
+.cheat-sheet-header{display:flex;justify-content:space-between;align-items:center;padding:24px 24px 16px 24px;border-bottom:1px solid rgba(251,191,36,0.1)}
+.cheat-sheet-header h3{color:var(--gold);font-size:24px;font-weight:800;margin:0}
+.difficulty-badge{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);padding:4px 12px;border-radius:12px;font-size:12px;font-weight:700}
+
+.cheat-sheet-preview{padding:0 24px 24px 24px}
+.cheat-sheet-preview h4{color:var(--gold);font-size:18px;font-weight:700;margin:20px 0 12px 0}
+.cheat-sheet-preview h4:first-child{margin-top:0}
+.cheat-sheet-preview p{margin:0 0 12px 0;color:var(--text-secondary);line-height:1.6}
+.cheat-sheet-preview ul{margin:0 0 16px 0;padding-left:20px}
+.cheat-sheet-preview li{margin:8px 0;color:var(--text-secondary);line-height:1.5}
+.cheat-sheet-preview code{background:rgba(251,191,36,0.1);color:var(--gold);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:14px}
+
+.code-example{background:var(--bg);border:1px solid rgba(251,191,36,0.2);border-radius:var(--radius);padding:20px;margin:16px 0}
+.code-example h4{color:var(--gold);margin:0 0 12px 0;font-size:16px}
+.code-example pre{background:transparent;color:var(--text);margin:0;overflow-x:auto}
+.code-example code{background:transparent;color:var(--text);padding:0;font-family:'Courier New',monospace;font-size:14px;line-height:1.5}
+
+.cheat-sheet-actions{padding:16px 24px 24px 24px;display:flex;gap:12px;border-top:1px solid rgba(251,191,36,0.1)}
+
+.cheat-sheets-cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--bg);padding:40px;border-radius:var(--radius-lg);margin:40px 0;text-align:center;box-shadow:var(--glow);position:relative;overflow:hidden}
+.cheat-sheets-cta::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.1) 0%,transparent 70%);pointer-events:none}
+.cheat-sheets-cta h2{font-size:28px;font-weight:800;margin:0 0 16px 0;position:relative;z-index:1}
+.cheat-sheets-cta p{font-size:18px;margin:0 0 24px 0;opacity:0.9;position:relative;z-index:1}
+.cheat-sheets-cta .actions{position:relative;z-index:1}
+
 /* new enhanced styles */
 .hero-stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap;justify-content:center}
 .stat{text-align:center;padding:20px;background:rgba(251,191,36,0.1);border-radius:var(--radius);border:1px solid rgba(251,191,36,0.2);backdrop-filter:blur(10px);transition:all 0.3s ease;min-width:120px}
