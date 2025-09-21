@@ -432,3 +432,87 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 @media(min-width:800px){
   .booking-grid{grid-template-columns:repeat(3,1fr)}
 }
+
+/* session booking card styles */
+.session-booking-section{margin:48px 0;text-align:center}
+.session-booking-section h2{color:var(--gold);font-size:32px;font-weight:800;margin:0 0 16px 0}
+.session-booking-section p{margin:0 0 32px 0;color:var(--text-secondary);font-size:18px}
+
+.session-booking-card{background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow);border:2px solid rgba(251,191,36,0.3);backdrop-filter:blur(10px);overflow:hidden;position:relative;max-width:800px;margin:0 auto;transition:all 0.3s ease;animation:cardFloat 3s ease-in-out infinite}
+.session-booking-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:1;animation:gradientShift 2s ease-in-out infinite}
+.session-booking-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:var(--shadow-lg);border-color:rgba(251,191,36,0.5);animation:none}
+
+@keyframes cardFloat{
+  0%,100%{transform:translateY(0px)}
+  50%{transform:translateY(-2px)}
+}
+
+@keyframes gradientShift{
+  0%,100%{background:linear-gradient(90deg,var(--gold),var(--accent))}
+  50%{background:linear-gradient(90deg,var(--accent),var(--gold))}
+}
+
+.session-profile{display:flex;align-items:center;gap:20px;padding:32px 32px 24px 32px;border-bottom:1px solid rgba(251,191,36,0.1)}
+.session-logo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);filter:drop-shadow(0 0 15px rgba(251,191,36,0.3))}
+.session-profile-info{flex:1;text-align:left}
+.session-profile-info h3{color:var(--gold);font-size:24px;font-weight:800;margin:0 0 8px 0}
+.session-title{color:var(--text);font-size:16px;font-weight:600;margin:0 0 4px 0}
+.session-subtitle{color:var(--text-secondary);font-size:14px;margin:0}
+
+.session-content{padding:24px 32px 32px 32px}
+.session-description{color:var(--text-secondary);font-size:16px;line-height:1.6;margin:0 0 24px 0;text-align:left}
+
+.session-features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 24px 0}
+.session-feature{display:flex;align-items:center;gap:8px;padding:12px;background:rgba(251,191,36,0.1);border-radius:var(--radius);border:1px solid rgba(251,191,36,0.2);transition:all 0.3s ease;position:relative;overflow:hidden}
+.session-feature::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(251,191,36,0.1),transparent);transition:left 0.5s ease}
+.session-feature:hover::before{left:100%}
+.session-feature:hover{background:rgba(251,191,36,0.15);border-color:rgba(251,191,36,0.3);transform:translateY(-2px) scale(1.02);box-shadow:0 4px 12px rgba(251,191,36,0.2)}
+.session-feature .feature-icon{font-size:18px;filter:drop-shadow(0 0 8px rgba(251,191,36,0.3));transition:all 0.3s ease;animation:featureIconPulse 2s infinite}
+.session-feature:hover .feature-icon{transform:scale(1.2) rotate(5deg);filter:drop-shadow(0 0 12px rgba(251,191,36,0.5))}
+.session-feature span:last-child{color:var(--text);font-size:14px;font-weight:600;transition:color 0.3s ease}
+.session-feature:hover span:last-child{color:var(--gold)}
+
+@keyframes featureIconPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+}
+
+.session-availability{text-align:center;margin:0 0 24px 0}
+.availability-text{color:var(--accent-2);font-size:16px;font-weight:600;margin:0;padding:12px 20px;background:rgba(6,182,212,0.1);border-radius:var(--radius);border:1px solid rgba(6,182,212,0.2);display:inline-block;animation:availabilityPulse 2s ease-in-out infinite;position:relative;overflow:hidden}
+.availability-text::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.2),transparent);animation:availabilityShimmer 3s ease-in-out infinite}
+
+@keyframes availabilityPulse{
+  0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(6,182,212,0.3)}
+  50%{transform:scale(1.02);box-shadow:0 0 0 8px rgba(6,182,212,0)}
+}
+
+@keyframes availabilityShimmer{
+  0%{left:-100%}
+  50%{left:100%}
+  100%{left:100%}
+}
+
+.session-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* responsive session booking */
+@media(max-width:600px){
+  .session-profile{flex-direction:column;text-align:center;gap:16px}
+  .session-profile-info{text-align:center}
+  .session-features{grid-template-columns:1fr}
+  .session-actions{flex-direction:column;align-items:center}
+  .session-actions .btn{width:100%;max-width:300px}
+  .session-feature span:last-child{font-size:13px}
+}
+
+@media(min-width:600px){
+  .session-features{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(min-width:800px){
+  .session-features{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(min-width:1000px){
+  .session-features{grid-template-columns:repeat(2,1fr)}
+  .session-feature span:last-child{font-size:15px}
+}
