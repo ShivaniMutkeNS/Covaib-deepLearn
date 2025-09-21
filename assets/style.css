@@ -433,7 +433,7 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
   .booking-grid{grid-template-columns:repeat(3,1fr)}
 }
 
-/* session booking card styles */
+/* session booking card styles - updated */
 .session-booking-section{margin:48px 0;text-align:center}
 .session-booking-section h2{color:var(--gold);font-size:32px;font-weight:800;margin:0 0 16px 0}
 .session-booking-section p{margin:0 0 32px 0;color:var(--text-secondary);font-size:18px}
