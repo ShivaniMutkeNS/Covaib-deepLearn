@@ -176,6 +176,19 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 .content-cta p{font-size:20px;margin:0 0 32px 0;opacity:0.9;position:relative;z-index:1;line-height:1.6;color:var(--text-secondary)}
 .content-cta .actions{position:relative;z-index:1;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
+/* community section styles */
+.community-section{margin:48px 0;text-align:center}
+.community-section h2{color:var(--gold);font-size:32px;font-weight:800;margin:0 0 16px 0}
+.community-section p{color:var(--text-secondary);font-size:18px;margin:0 0 32px 0}
+.community-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:32px}
+.community-card{background:var(--card);padding:32px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid rgba(251,191,36,0.1);transition:all 0.3s ease;backdrop-filter:blur(10px);text-align:center;position:relative;overflow:hidden}
+.community-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:0;transition:opacity 0.3s ease}
+.community-card:hover::before{opacity:1}
+.community-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(251,191,36,0.3)}
+.community-icon{font-size:48px;margin-bottom:16px;display:block}
+.community-card h3{color:var(--gold);font-size:24px;font-weight:800;margin:0 0 16px 0}
+.community-card p{color:var(--text-secondary);margin:0 0 24px 0;line-height:1.6}
+
 /* new enhanced styles */
 .hero-stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap;justify-content:center}
 .stat{text-align:center;padding:20px;background:rgba(251,191,36,0.1);border-radius:var(--radius);border:1px solid rgba(251,191,36,0.2);backdrop-filter:blur(10px);transition:all 0.3s ease;min-width:120px}
@@ -289,6 +302,7 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
   .upcoming-grid{grid-template-columns:repeat(3,1fr)}
   .intro-features{grid-template-columns:repeat(3,1fr)}
   .content-grid{grid-template-columns:repeat(2,1fr)}
+  .community-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(min-width:1200px){
