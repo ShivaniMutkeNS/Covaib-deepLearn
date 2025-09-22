@@ -65,6 +65,9 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 .quicklist li{padding:8px 0;color:var(--text-secondary);position:relative;padding-left:20px}
 .quicklist li::before{content:'✨';position:absolute;left:0;color:var(--gold)}
 
+/* local in-page nav */
+.local-nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px 0 16px 0}
+
 /* layout */
 .section{padding:30px 0;position:relative}
 .card{background:var(--card);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid rgba(251,191,36,0.1);transition:all 0.3s ease;backdrop-filter:blur(10px)}
@@ -176,6 +179,21 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 .content-cta h2{font-size:32px;font-weight:800;margin:0 0 20px 0;position:relative;z-index:1;color:var(--gold)}
 .content-cta p{font-size:20px;margin:0 0 32px 0;opacity:0.9;position:relative;z-index:1;line-height:1.6;color:var(--text-secondary)}
 .content-cta .actions{position:relative;z-index:1;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* compact centered sections */
+.center-section .section-header{text-align:center}
+.center-section .content-grid{ justify-items:center }
+.center-card{ text-align:center; max-width:1000px; width:100%; margin:0 auto }
+.center-card .content-preview{ text-align:center }
+.centered-list{ list-style:none; padding:0; margin:0; display:inline-block; text-align:left }
+.centered-list li{ margin:6px 0; color:var(--text-secondary) }
+
+/* enhanced highlight card */
+.center-card.enhanced{border:2px solid rgba(251,191,36,0.35);background:linear-gradient(135deg,var(--card) 0%,var(--card-hover) 100%);box-shadow:var(--shadow-lg)}
+.center-card.enhanced .content-header h3{color:var(--gold);font-weight:800}
+
+/* center the special card under mastery kit */
+#mastery-kit .content-grid{justify-items:center}
 
 /* community section styles */
 .community-section{margin:48px 0;text-align:center}
@@ -312,6 +330,9 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 }
 
 /* services page styles */
+.back-to-top{position:fixed;bottom:20px;right:20px;z-index:80;display:none}
+.back-to-top.show{display:block}
+.back-to-top .btn{padding:10px 16px;border-radius:24px}
 .services-grid{display:grid;grid-template-columns:1fr;gap:24px;margin:32px 0}
 .service-card{background:var(--card);padding:32px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid rgba(251,191,36,0.1);transition:all 0.3s ease;backdrop-filter:blur(10px);position:relative;overflow:hidden}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:0;transition:opacity 0.3s ease}
