@@ -31,6 +31,7 @@
     <nav class="local-nav" aria-label="In-page navigation">
       <a class="btn ghost" href="#live-course">Live Course</a>
       <a class="btn ghost" href="#mastery-kit">Mastery Kit</a>
+      <a class="btn ghost" href="#final-java-course">Complete Java Mastery</a>
       <a class="btn ghost" href="#essentials">Essentials</a>
       <a class="btn ghost" href="#upcoming-tracks">Upcoming</a>
     </nav>
@@ -56,7 +57,7 @@
           <div class="session-profile-info">
             <h3>Be the Engineer Everyone Asks in the Room</h3>
             <p class="session-title">From JVM Internals to System Design — One Kit. Infinite Power.</p>
-            <p class="session-subtitle">₹5000 • One-time investment → Lifetime value</p>
+            <p class="session-subtitle">₹<span data-price-number></span> • One-time investment → Lifetime value</p>
             
           </div>
         
@@ -86,8 +87,8 @@
           </div>
 
           <div class="hero-stats" style="margin-top:24px">
-            <div class="stat"><strong>₹5000</strong><span>One-time</span></div>
-            <div class="stat"><strong>500+ Pages</strong><span>Premium Kit</span></div>
+            <div class="stat"><strong>₹<span data-price-number></span></strong><span>One-time</span></div>
+            <div class="stat"><strong>2000+ Pages</strong><span>Premium Kit</span></div>
             <div class="stat"><strong>15+</strong><span>Mini Projects</span></div>
           </div>
         </div>
@@ -183,7 +184,7 @@
 
         <div class="content-card">
           <div class="content-header">
-            <h3>📚 300–500+ Page Premium Knowledge Kit</h3>
+            <h3>📚 2000+ Page Premium Knowledge Kit</h3>
             <span class="content-type">Knowledge Kit</span>
             <span class="difficulty-badge">Premium</span>
           </div>
@@ -216,7 +217,7 @@
           <div class="content-header"><h3>💰 Why invest?</h3></div>
           <div class="content-preview">
             <ul class="centered-list">
-              <li>⚡ All this at just ₹5000</li>
+              <li>⚡ All this at just ₹<span data-price-number></span></li>
               <li>📖 One-time → Lifetime value → Infinite career returns</li>
               <li>📈 Interview-to-production alignment</li>
             </ul>
@@ -251,32 +252,58 @@
     <section class="upcoming-section" id="upcoming-tracks">
       <h2>🔜 Upcoming Tracks</h2>
       <div class="live-course" style="margin-top:12px">
-        <div class="upcoming-grid">
+      <div class="upcoming-grid">
+        <article class="course-card">
+          <div class="course-icon">☕</div>
+            <h3>Advanced Java Concepts</h3>
+            <p>JVM model, memory layout, GC tuning, classloading, JIT, and performance profiling.</p>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">⚡</div>
+          <h3>Advanced Concurrency & Multithreading</h3>
+          <p>Thread-safety patterns, lock-free algorithms, executor frameworks and real concurrency bugs.</p>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">🌱</div>
+          <h3>Java + Spring Boot Mastery</h3>
+          <p>Spring internals, REST best practices, security, observability, testing & packaging.</p>
+        </article>
           <article class="course-card">
-            <div class="course-icon">☕</div>
-            <h3>JVM Internals & Performance</h3>
-            <p>Classloading, bytecode patterns, GC tuning, profiling & practical performance fixes.</p>
+            <div class="course-icon">🐍</div>
+            <h3>Python Fundamentals In-Depth</h3>
+            <p>Core syntax, OOP, modules, typing, file/IO, concurrency basics, and best practices.</p>
           </article>
           <article class="course-card">
-            <div class="course-icon">⚡</div>
-            <h3>Advanced Concurrency & Multithreading</h3>
-            <p>Thread-safety patterns, lock-free algorithms, executor frameworks and real concurrency bugs.</p>
+            <div class="course-icon">🧮</div>
+            <h3>Advanced SQL</h3>
+            <p>Query tuning, indexing strategies, execution plans, window functions, and OLTP/OLAP design.</p>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">☁️</div>
+          <h3>Microservices & Cloud Patterns</h3>
+          <p>Designing services, resilience, contracts, API gateways, scaling and deployment patterns.</p>
+        </article>
+          <article class="course-card">
+            <div class="course-icon">🧠</div>
+            <h3>Functional Programming & Collections A–Z</h3>
+            <p>Streams, lambdas, collectors, immutability, performance of collections, and pitfalls.</p>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">🏗️</div>
+            <h3>Expert Level System Design</h3>
+            <p>Scalability, consistency models, CAP trade-offs, and production design reviews.</p>
           </article>
           <article class="course-card">
-            <div class="course-icon">🌱</div>
-            <h3>Java + Spring Boot Mastery</h3>
-            <p>Spring internals, REST best practices, security, observability, testing & packaging.</p>
+            <div class="course-icon">🛠️</div>
+            <h3>Expert HLD & LLD with System Internals</h3>
+            <p>Real-world architectures with deep dives into queues, caches, storage, and protocols.</p>
           </article>
           <article class="course-card">
-            <div class="course-icon">☁️</div>
-            <h3>Microservices & Cloud Patterns</h3>
-            <p>Designing services, resilience, contracts, API gateways, scaling and deployment patterns.</p>
-          </article>
-          <article class="course-card">
-            <div class="course-icon">🏗️</div>
-            <h3>System Design with Java (LLD + HLD)</h3>
-            <p>End-to-end HLD + LLD case studies with trade-offs and sample designs.</p>
-          </article>
+            <div class="course-icon">🧩</div>
+            <h3>Advanced Java Class Design & Object Management</h3>
+            <p>Design principles, object lifecycle, memory impact, equality/hashCode, and pattern-driven design.</p>
+        </article>
+          
         </div>
         <div class="section-actions" style="margin-top:16px">
           <a class="btn ghost" href="contact.html">Get Notified</a>
@@ -311,6 +338,35 @@
       </div>
       <p class="structure-note">This ensures you learn, practice, revise, and apply — the exact formula Tier-1 engineers follow.</p>
     </section>
+    
+    <section class="content-section" id="final-java-course">
+      <div class="section-header">
+        <h2>🏁 Final Java Course — Included Tracks</h2>
+        <p class="muted">Your complete Java mastery pathway bundled together.</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <div class="content-header"><h3>Java OOP DeepPrep</h3></div>
+          <div class="content-preview"><p>OOP foundations with 15 mini projects and interview-focused explanations.</p></div>
+        </div>
+        <div class="content-card">
+          <div class="content-header"><h3>Functional Programming & Collections A–Z</h3></div>
+          <div class="content-preview"><p>Streams, lambdas, collectors, immutability, collection performance and pitfalls.</p></div>
+        </div>
+        <div class="content-card">
+          <div class="content-header"><h3>Advanced Concurrency & Multithreading</h3></div>
+          <div class="content-preview"><p>Executors, lock-free patterns, synchronization, and real-world concurrency bugs.</p></div>
+        </div>
+        <div class="content-card">
+          <div class="content-header"><h3>Advanced Java Class Design & Object Management</h3></div>
+          <div class="content-preview"><p>Design principles, object lifecycle, memory impact, equals/hashCode, patterns.</p></div>
+        </div>
+        <div class="content-card">
+          <div class="content-header"><h3>Advanced Java Concepts</h3></div>
+          <div class="content-preview"><p>JVM model, GC tuning, classloading, JIT, performance profiling and diagnostics.</p></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -329,6 +385,11 @@
     window.addEventListener('scroll',()=>{
       if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
     });
+    // centralized price variable
+    const COURSE_PRICE = 5000;
+    const priceNodes = document.querySelectorAll('[data-price-number]');
+    priceNodes.forEach(n=>{ n.textContent = COURSE_PRICE.toString(); });
+    // package price removed (package card moved to mastery section link)
   </script>
 </body>
 </html>
