@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — CoVaib DeepPrep</title>
+  <title>Contact — CoVaib-DeepLearn</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
       <a class="brand" href="index.html">
         <img src="assets/Logo.jpg" alt="logo" class="logo" />
         <div class="brand-text">
-          <strong class="brand-name">COVAIB <span class="brand-sub">DeepPrep</span></strong>
+          <strong class="brand-name">COVAIB <span class="brand-sub">DeepLearn</span></strong>
           <small>Elite Interview Prep — MAANG++ & Tier-1</small>
         </div>
       </a>
@@ -53,10 +53,10 @@
       
       <div class="session-booking-card">
         <div class="session-profile">
-          <img src="assets/Logo.jpg" alt="CoVaib DeepPrep" class="session-logo" />
+          <img src="assets/Logo.jpg" alt="CoVaib-DeepLearn" class="session-logo" />
           <div class="session-profile-info">
             <h3>Shivani Mutke</h3>
-            <p class="session-title">Fintech Engineer | Founder and Backend Architect at CoVaib-DeepPrep</p>
+            <p class="session-title">Fintech Engineer | Founder and Backend Architect at CoVaib-DeepLearn</p>
             <p class="session-subtitle">Java & System Design Expert | 95+ Interviews Taken | Personalized Guidance/Mentorship</p>
           </div>
         </div>
@@ -154,12 +154,20 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div><strong>CoVaib DeepPrep</strong></div>
+      <div><strong>CoVaib-DeepLearn</strong></div>
       <div class="footer-actions"><a href="index.html">Home</a><a href="courses.html">Advanced Learning Kit</a><a href="services.html">Services</a><a href="about.html">About</a></div>
-      <div class="muted">© <span id="year4"></span> CoVaib DeepPrep</div>
+      <div class="muted">© <span id="year4"></span> CoVaib-DeepLearn</div>
     </div>
   </footer>
 
-  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+  <a href="#top" id="backToTop" class="back-to-top"><span class="btn ghost">Back to top ↑</span></a>
+
+  <script>
+    document.getElementById('year4').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
+  </script>
 </body>
 </html>

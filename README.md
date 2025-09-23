@@ -1,6 +1,6 @@
-# CoVaib DeepPrep Website
+# CoVaib-DeepLearn Website
 
-A complete static website for CoVaib DeepPrep - Elite Tier-1 Interview Preparation platform.
+A complete static website for CoVaib-DeepLearn - Elite Tier-1 Interview Preparation platform.
 
 ## Files Structure
 
@@ -48,4 +48,4 @@ covaib-site/
 
 ## License
 
-© 2024 CoVaib DeepPrep — All rights reserved
+© 2024 CoVaib-DeepLearn — All rights reserved

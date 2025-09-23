@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Free Content — CoVaib DeepPrep</title>
+  <title>Free Content — CoVaib-DeepLearn</title>
   <meta name="description" content="Free Java cheat sheets, system design blogs, and interview preparation materials. High-quality content from Tier-1 preparation journey." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="assets/Logo.jpg" />
@@ -12,9 +12,9 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
-        <img src="assets/Logo.jpg" alt="CoVaib DeepPrep logo" class="logo" />
+        <img src="assets/Logo.jpg" alt="CoVaib-DeepLearn logo" class="logo" />
         <div class="brand-text">
-          <strong class="brand-name">COVAIB <span class="brand-sub">DeepPrep</span></strong>
+          <strong class="brand-name">COVAIB <span class="brand-sub">DeepLearn</span></strong>
           <small>Elite Interview Prep — MAANG++ & Tier-1</small>
         </div>
       </a>
@@ -430,7 +430,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div>
-        <strong>CoVaib DeepPrep</strong><br />
+        <strong>CoVaib-DeepLearn</strong><br />
         <small class="muted">Elite Interview Prep — MAANG++ & Tier-1</small>
       </div>
       <div class="footer-actions">
@@ -440,12 +440,18 @@
         <a href="free-content.html">Free Content</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="muted">© <span id="year"></span> CoVaib DeepPrep — All rights reserved</div>
+      <div class="muted">© <span id="year"></span> CoVaib-DeepLearn — All rights reserved</div>
     </div>
   </footer>
 
+  <a href="#top" id="backToTop" class="back-to-top"><span class="btn ghost">Back to top ↑</span></a>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
   </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Java Cheat Sheets — CoVaib DeepPrep</title>
+  <title>Java Cheat Sheets — CoVaib-DeepLearn</title>
   <meta name="description" content="Free Java cheat sheets covering OOP concepts, interfaces, abstract classes, and more. Practical reference materials for interview preparation." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="assets/logo-512.png" />
@@ -12,7 +12,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
-        <img src="assets/Logo.jpg" alt="CoVaib DeepPrep logo" class="logo" />
+        <img src="assets/Logo.jpg" alt="CoVaib-DeepLearn logo" class="logo" />
         <div class="brand-text">
           <strong class="brand-name">COVAIB <span class="brand-sub">DeepPrep</span></strong>
           <small>Elite Interview Prep — MAANG++ & Tier-1</small>
@@ -203,7 +203,7 @@ class Circle extends Shape {
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div>
-        <strong>CoVaib DeepPrep</strong><br />
+        <strong>CoVaib-DeepLearn</strong><br />
         <small class="muted">Elite Interview Prep — MAANG++ & Tier-1</small>
       </div>
       <div class="footer-actions">
@@ -212,12 +212,18 @@ class Circle extends Shape {
         <a href="cheat-sheets.html">Cheat Sheets</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="muted">© <span id="year"></span> CoVaib DeepPrep — All rights reserved</div>
+      <div class="muted">© <span id="year"></span> CoVaib-DeepLearn — All rights reserved</div>
     </div>
   </footer>
 
+  <a href="#top" id="backToTop" class="back-to-top"><span class="btn ghost">Back to top ↑</span></a>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
   </script>
 </body>
 </html>

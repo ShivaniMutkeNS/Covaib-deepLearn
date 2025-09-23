@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CoVaib DeepPrep — Elite Tier-1 Interview Prep</title>
-  <meta name="description" content="CoVaib DeepPrep — Java, System Design, Microservices, Spring Boot, Advanced SQL. Learn with project-backed Tier-1 rigor." />
+  <title>CoVaib-DeepLearn — Elite Tier-1 Interview Prep</title>
+  <meta name="description" content="CoVaib-DeepLearn — Java, System Design, Microservices, Spring Boot, Advanced SQL. Learn with project-backed Tier-1 rigor." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="assets/Logo.jpg" />
 </head>
@@ -12,9 +12,9 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
-        <img src="assets/Logo.jpg" alt="CoVaib DeepPrep logo" class="logo" />
+        <img src="assets/Logo.jpg" alt="CoVaib-DeepLearn logo" class="logo" />
         <div class="brand-text">
-          <strong class="brand-name">COVAIB <span class="brand-sub">DeepPrep</span></strong>
+          <strong class="brand-name">COVAIB <span class="brand-sub">DeepLearn</span></strong>
           <small>Elite Interview Prep — MAANG++ & Tier-1</small>
         </div>
       </a>
@@ -34,9 +34,9 @@
     <!-- HERO -->
     <section class="hero wrap">
       <div class="hero-left">
-        <span class="badge">🚀 CoVaib DeepPrep Elite</span>
+        <span class="badge">🚀 CoVaib-DeepLearn Elite</span>
         <h1>Engineered for Developers Who Aim Higher — Tier-1 & MAANG++ Preparation</h1>
-        <p class="lead">At CoVaib DeepPrep, we believe average preparation will never unlock Tier-1 opportunities. Founded by a Java System Design Engineer preparing for MAANG++ interviews, we've grown into a platform for ambitious developers worldwide who want to aim higher, master backend engineering, and prepare with Tier-1 rigor.</p>
+        <p class="lead">At CoVaib-DeepLearn, we believe average preparation will never unlock Tier-1 opportunities. Founded by a Java System Design Engineer preparing for MAANG++ interviews, we've grown into a platform for ambitious developers worldwide who want to aim higher, master backend engineering, and prepare with Tier-1 rigor.</p>
 
         <div class="actions">
           <a class="btn primary" href="cheat-sheets.html">Free Cheat Sheets</a>
@@ -60,7 +60,7 @@
       </div>
 
       <aside class="hero-right card">
-        <h3>Preview: Java OOP Module</h3>
+        <h3>Preview: CoVaib DeepLearn</h3>
         <p class="muted">15 mini-projects, demo outputs, build tips and interview-focused explanations — a hands-on sample of our teaching approach.</p>
         <ul class="mini">
           <li>Inheritance • Encapsulation • Composition</li>
@@ -76,7 +76,7 @@
 
     <!-- WHY COVAIB -->
     <section id="why-covaib" class="wrap section">
-      <h2>💡 Why CoVaib DeepPrep?</h2>
+      <h2>💡 Why CoVaib-DeepLearn?</h2>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">🎯</div>
@@ -191,7 +191,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div>
-        <strong>CoVaib DeepPrep</strong><br />
+        <strong>CoVaib-DeepLearn</strong><br />
         <small class="muted">Elite Interview Prep — MAANG++ & Tier-1</small>
       </div>
       <div class="footer-actions">
@@ -200,12 +200,18 @@
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="muted">© <span id="year"></span> CoVaib DeepPrep — All rights reserved</div>
+      <div class="muted">© <span id="year"></span> CoVaib-DeepLearn — All rights reserved</div>
     </div>
   </footer>
 
+  <a href="#top" id="backToTop" class="back-to-top"><span class="btn ghost">Back to top ↑</span></a>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
   </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — CoVaib DeepPrep</title>
+  <title>About — CoVaib-DeepLearn</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
       <a class="brand" href="index.html">
         <img src="assets/Logo.jpg" alt="Logo" class="logo" />
         <div class="brand-text">
-          <strong class="brand-name">COVAIB <span class="brand-sub">DeepPrep</span></strong>
+          <strong class="brand-name">COVAIB <span class="brand-sub">DeepLearn</span></strong>
           <small>Elite Interview Prep — MAANG++ & Tier-1</small>
         </div>
       </a>
@@ -28,12 +28,12 @@
   </header>
 
   <main class="wrap section">
-    <h1>🚀 About CoVaib DeepPrep</h1>
+    <h1>🚀 About CoVaib-DeepLearn</h1>
 
     <div class="about-intro">
-      <p>At <strong>CoVaib DeepPrep</strong>, we believe average preparation will never unlock Tier-1 opportunities.</p>
+      <p>At <strong>CoVaib-DeepLearn</strong>, we believe average preparation will never unlock Tier-1 opportunities.</p>
       
-      <p>Founded by a Java System Design Engineer preparing for MAANG++ interviews, CoVaib DeepPrep began as a personal journey to secure competitive Tier-1 roles. Today, it has grown into a platform for ambitious developers worldwide who want to aim higher, master backend engineering, and prepare with Tier-1 rigor.</p>
+      <p>Founded by a Java System Design Engineer preparing for MAANG++ interviews, CoVaib-DeepLearn began as a personal journey to secure competitive Tier-1 roles. Today, it has grown into a platform for ambitious developers worldwide who want to aim higher, master backend engineering, and prepare with Tier-1 rigor.</p>
     </div>
 
     <div class="mission-section">
@@ -48,7 +48,7 @@
 
     <div class="course-structure">
       <h2>📂 Course Structure</h2>
-      <p>Every CoVaib DeepPrep course follows a proven Tier-1 structure:</p>
+      <p>Every CoVaib-DeepLearn course follows a proven Tier-1 structure:</p>
       <div class="structure-steps">
         <div class="step">
           <div class="step-number">1️⃣</div>
@@ -90,17 +90,25 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div><strong>CoVaib DeepPrep</strong></div>
+      <div><strong>CoVaib-DeepLearn</strong></div>
       <div class="footer-actions">
         <a href="index.html">Home</a>
         <a href="courses.html">Advanced Learning Kit</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="muted">© <span id="year2"></span> CoVaib DeepPrep</div>
+      <div class="muted">© <span id="year2"></span> CoVaib-DeepLearn</div>
     </div>
   </footer>
 
-  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+  <a href="#top" id="backToTop" class="back-to-top"><span class="btn ghost">Back to top ↑</span></a>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
+  </script>
 </body>
 </html>
