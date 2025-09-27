@@ -192,6 +192,11 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
 .center-card.enhanced{border:2px solid rgba(251,191,36,0.35);background:linear-gradient(135deg,var(--card) 0%,var(--card-hover) 100%);box-shadow:var(--shadow-lg)}
 .center-card.enhanced .content-header h3{color:var(--gold);font-weight:800}
 
+/* featured course card */
+.content-card.featured{border:2px solid rgba(251,191,36,0.4);background:linear-gradient(135deg,var(--card) 0%,var(--card-hover) 100%);box-shadow:var(--shadow-lg);position:relative}
+.content-card.featured::before{content:'⭐';position:absolute;top:12px;right:12px;font-size:20px;color:var(--gold)}
+.content-card.featured .content-header h3{color:var(--gold);font-weight:800}
+
 /* center the special card under mastery kit */
 #mastery-kit .content-grid{justify-items:center}
 
