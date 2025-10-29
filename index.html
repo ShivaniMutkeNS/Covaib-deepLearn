@@ -30,6 +30,13 @@
     </div>
   </header>
 
+  <div class="offer-banner" id="offerBanner">
+    <div class="inner">
+      <span>🔥 Limited Time Offer: Use <span class="offer-code">JAVABOOM60BY2025</span> for <strong>90% off</strong> on all courses till December 2025.</span>
+      <button class="offer-close" id="offerClose" aria-label="Close offer">✕</button>
+    </div>
+  </div>
+
   <main>
     <!-- HERO -->
     <section class="hero wrap">
@@ -73,6 +80,76 @@
           <a class="btn small ghost" href="courses.html">See Course Structure</a>
         </div>
       </aside>
+    </section>
+
+    <!-- FEATURED BUNDLE: JAVA ARCHITECT X SERIES -->
+    <section class="content-section" id="architect-x-series">
+      <div class="wrap">
+        <div class="content-card featured">
+          <div class="content-header">
+            <h3>Java Architect X Series — Combination of 5 Advanced Courses</h3>
+            <span class="content-type">Bundle</span>
+            <span class="difficulty-badge">Expert</span>
+          </div>
+          <div class="content-preview">
+            <p class="muted">Includes OOP Mastery, Advanced Java Class Design, Advanced Multithreading & High-Performance DS, Collections + Functional Programming + Streams, and Advanced Java Masterclass (JVM, JIT, GC, JMM, NIO, Reactive, Virtual Threads).</p>
+            <div class="content-actions">
+              <a class="btn primary" href="courses.html">Explore All Courses</a>
+              <a class="btn ghost explore-toggle" data-target="#bundleTopics">Explore Topics</a>
+            </div>
+            <div class="explore-content" id="bundleTopics">
+              <h4>OOP Course</h4>
+              <ul class="course-topics">
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Composition</li>
+                <li>Abstraction</li>
+              </ul>
+              <h4 style="margin-top:12px">Advanced Java Class Design & Object Management</h4>
+              <ul class="course-topics">
+                <li>this, super & constructor chaining (JVM init order)</li>
+                <li>Copy constructor & object cloning (deep vs shallow)</li>
+                <li>Serialization vs cloning — tradeoffs</li>
+                <li>Singletons: enum, reflection & serialization-safe</li>
+                <li>final, finally, finalize — GC lifecycle</li>
+                <li>Covariance & contravariance</li>
+                <li>Immutable classes & collections</li>
+                <li>Marker interfaces (Serializable, Cloneable)</li>
+                <li>static keyword deep dive</li>
+                <li>Java String internals & performance</li>
+              </ul>
+              <h4 style="margin-top:12px">Advanced Multithreading, Concurrency & High-Performance DS</h4>
+              <ul class="course-topics">
+                <li>Threads, synchronization, locks, volatile</li>
+                <li>ExecutorService, Future & CompletableFuture</li>
+                <li>ForkJoin & work-stealing</li>
+                <li>Atomic & ThreadLocal</li>
+                <li>LRU Cache patterns</li>
+                <li>Skip List — ConcurrentSkipListMap/Set</li>
+                <li>Trie (prefix tree) concurrency</li>
+              </ul>
+              <h4 style="margin-top:12px">Collections, Functional Programming & Streams</h4>
+              <ul class="course-topics">
+                <li>List, Set, Map, Queue, Deque performance</li>
+                <li>Concurrent collections</li>
+                <li>Lambdas, method references, Optionals</li>
+                <li>Streams: intermediate vs terminal, collectors</li>
+                <li>Parallel streams, lazy evaluation</li>
+              </ul>
+              <h4 style="margin-top:12px">Advanced Java Masterclass</h4>
+              <ul class="course-topics">
+                <li>JVM Internals, Class Loading & Linking</li>
+                <li>GC Tuning & Log Analysis</li>
+                <li>JIT & HotSpot optimizations</li>
+                <li>Java Memory Model (JMM)</li>
+                <li>NIO, Async I/O, Reactive Programming</li>
+                <li>Advanced Concurrency & Virtual Threads (Java 21+)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- WHY COVAIB -->
@@ -212,6 +289,21 @@
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll',()=>{
       if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
+    });
+    // offer banner close (persist for session)
+    (function(){
+      const banner=document.getElementById('offerBanner');
+      const close=document.getElementById('offerClose');
+      if(sessionStorage.getItem('offerDismissed')==='1'){banner.style.display='none'}
+      close&&close.addEventListener('click',()=>{banner.style.display='none';sessionStorage.setItem('offerDismissed','1')});
+    })();
+    // explore toggle
+    document.querySelectorAll('.explore-toggle').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const sel=btn.getAttribute('data-target');
+        const panel=sel?document.querySelector(sel):btn.parentElement.nextElementSibling;
+        if(panel){panel.style.display=panel.style.display==='block'?'none':'block'}
+      })
     });
   </script>
 </body>

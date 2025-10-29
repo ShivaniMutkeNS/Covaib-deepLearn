@@ -543,3 +543,17 @@ h1{font-size:28px;margin:12px 0 8px;line-height:1.05;background:linear-gradient(
   .session-feature span:last-child{font-size:15px}
 }
 
+/* global offer banner */
+.offer-banner{position:sticky;top:64px;z-index:70;background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:var(--bg);border-bottom:1px solid rgba(0,0,0,0.2)}
+.offer-banner .inner{max-width:var(--max);margin:0 auto;padding:10px 20px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.offer-banner strong{font-weight:800}
+.offer-code{background:rgba(0,0,0,0.15);color:var(--bg);padding:4px 10px;border-radius:12px;border:1px solid rgba(0,0,0,0.25)}
+.offer-close{margin-left:auto;background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.25);color:var(--bg);padding:4px 10px;border-radius:12px;cursor:pointer}
+
+/* explore details toggle */
+.explore-content{display:none;margin-top:12px;padding:16px;border-radius:12px;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.25)}
+.explore-toggle{cursor:pointer}
+
+/* course list utilities */
+.course-topics{margin:8px 0 0 0;padding-left:20px}
+.course-topics li{margin:6px 0;color:var(--text-secondary)}

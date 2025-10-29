@@ -29,6 +29,13 @@
     </div>
   </header>
 
+  <div class="offer-banner" id="offerBanner">
+    <div class="inner">
+      <span>🔥 Limited Time Offer: Use <span class="offer-code">JAVABOOM60BY2025</span> for <strong>90% off</strong> on all courses till December 2025.</span>
+      <button class="offer-close" id="offerClose" aria-label="Close offer">✕</button>
+    </div>
+  </div>
+
   <main class="wrap section">
     <h1>📚 Free Java Cheat Sheets</h1>
     <p class="muted">Practical reference materials from our Tier-1 preparation journey. Download, study, and ace your interviews.</p>
@@ -224,6 +231,13 @@ class Circle extends Shape {
     window.addEventListener('scroll',()=>{
       if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
     });
+    // offer banner close
+    (function(){
+      const banner=document.getElementById('offerBanner');
+      const close=document.getElementById('offerClose');
+      if(sessionStorage.getItem('offerDismissed')==='1'){banner.style.display='none'}
+      close&&close.addEventListener('click',()=>{banner.style.display='none';sessionStorage.setItem('offerDismissed','1')});
+    })();
   </script>
 </body>
 </html>
