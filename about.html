@@ -29,7 +29,10 @@
 
   <div class="offer-banner" id="offerBanner">
     <div class="inner">
-      <span>🔥 Limited Time Offer: Use <span class="offer-code">8MWPB9I</span> for <strong>90% off</strong> on all courses till December 2025.</span>
+      <div class="marquee-content">
+        <span>🔥 Limited Time Offer: Use <span class="offer-code">8MWPB9I</span> for <strong>90% off</strong> on all courses till December 2025.</span>
+        <span>🔥 Limited Time Offer: Use <span class="offer-code">8MWPB9I</span> for <strong>90% off</strong> on all courses till December 2025.</span>
+      </div>
       <button class="offer-close" id="offerClose" aria-label="Close offer">✕</button>
     </div>
   </div>
@@ -116,12 +119,39 @@
     window.addEventListener('scroll',()=>{
       if(window.scrollY>300){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}
     });
-    // offer banner close
+    // offer banner close and dynamic positioning
     (function(){
       const banner=document.getElementById('offerBanner');
       const close=document.getElementById('offerClose');
-      if(sessionStorage.getItem('offerDismissed')==='1'){banner.style.display='none'}
-      close&&close.addEventListener('click',()=>{banner.style.display='none';sessionStorage.setItem('offerDismissed','1')});
+      const body=document.body;
+      const header=document.querySelector('.site-header');
+      function updateBannerPosition(){
+        if(header&&banner){
+          const headerHeight=header.offsetHeight;
+          banner.style.top=headerHeight+'px';
+        }
+      }
+      function updateBannerState(){
+        if(banner&&banner.style.display!=='none'){
+          body.classList.add('has-offer-banner');
+          updateBannerPosition();
+        }else{
+          body.classList.remove('has-offer-banner');
+        }
+      }
+      if(sessionStorage.getItem('offerDismissed')==='1'){
+        if(banner)banner.style.display='none';
+      }else{
+        body.classList.add('has-offer-banner');
+      }
+      updateBannerPosition();
+      updateBannerState();
+      window.addEventListener('resize',updateBannerPosition);
+      close&&close.addEventListener('click',()=>{
+        if(banner)banner.style.display='none';
+        sessionStorage.setItem('offerDismissed','1');
+        body.classList.remove('has-offer-banner');
+      });
     })();
   </script>
 </body>
